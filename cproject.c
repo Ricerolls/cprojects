@@ -42,12 +42,10 @@ void closetwo() {
 }
 
 void temperature() {
-    static int week = 7;
-    int day[week];
+    int totalDays = 6;
+    int *day[totalDays];
 
-
-
-    const char *dayName[7];
+    char *dayName[6];
     dayName[0] = "Monday";
     dayName[1] = "Tuesday";
     dayName[2] = "Wednesday";
@@ -56,21 +54,17 @@ void temperature() {
     dayName[5] = "Saturday";
     dayName[6] = "Sunday";
 
-
-
     int i;
-    for (i=0; i < week; i++) {
-        printf("\n on %s the temperature is: ", dayName[i]);
-        scanf("%d" , day[i]);
-        
-        
-
+    
+    for (i=0; i <= totalDays; i++) {
+       printf("\non %s the temperature is: ", dayName[i]);
+        scanf("%d" , day[i]); 
     }
-    int x;
-    for (x = 0; x < week; x++) {
-       printf("The temperature on %s will be %d Degrees C\n" , dayName[x], day[x]);
 
+    for (i = 0; i <= totalDays; i++) {
+       printf("The temperature on %s will be %d Degrees C\n" , dayName[i], day[i]);
     }
+    
 }
 
 int main(int argc, char** argv) {
