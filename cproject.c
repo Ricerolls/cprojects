@@ -1,8 +1,8 @@
 /* 
  * File:   main.c
- * Author: 1leste
+ * Author: jefftruong
  *
- * Created on December 11, 2014, 11:02 AM
+ * Created on December 17, 2014, 3:03 PM
  */
 
 #include <stdio.h>
@@ -11,7 +11,6 @@
 /*
  * 
  */
-
 void pH() {
     printf("Ph level = ");
     float p;
@@ -43,9 +42,10 @@ void closetwo() {
 
 void temperature() {
     int totalDays = 6;
-    int *day[totalDays];
+    int day[totalDays];
 
-    char *dayName[6];
+    char* dayName[7];
+        
     dayName[0] = "Monday";
     dayName[1] = "Tuesday";
     dayName[2] = "Wednesday";
@@ -56,11 +56,11 @@ void temperature() {
 
     int i;
     
-    for (i=0; i <= totalDays; i++) {
+    for (i=0; i <= totalDays; i++) {   
        printf("\non %s the temperature is: ", dayName[i]);
-        scanf("%d" , day[i]); 
+        scanf("%d" , &day[i]); 
+        
     }
-
     for (i = 0; i <= totalDays; i++) {
        printf("The temperature on %s will be %d Degrees C\n" , dayName[i], day[i]);
     }
@@ -76,4 +76,3 @@ int main(int argc, char** argv) {
 
     return (EXIT_SUCCESS);
 }
-
